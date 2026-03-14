@@ -1,0 +1,389 @@
+:root {
+    --maincolor: #c7a17a;
+    --gray: #333;
+
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.home {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: url("../images/home-bg.png") center repeat;
+    background-size: cover;
+    background-color: rgb(216, 212, 212);
+    height: 550px;
+}
+
+.home .home-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home .text {
+    padding-top: 133px;
+}
+
+.home .text h3 {
+    font-size: 24px;
+    letter-spacing: -1px;
+    color: var(--gray);
+}
+
+.home .text h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--gray);
+}
+
+.home .text p {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+.home .text a {
+    padding: 15px 25px;
+    color: white;
+    border-radius: 30px;
+    border: 1px solid var(--maincolor);
+    background-color: var(--maincolor);
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+.home .text a i {
+    padding: 10px;
+}
+
+.home .container img {
+    display: block;
+    width: 500px;
+    position: relative;
+    top: 90px;
+}
+
+@media (max-width: 767px) {
+    .home .home-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home .container img {
+        display: none;
+    }
+}
+
+.about,
+.menu,
+.contact {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.about .about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about .about-content img {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.about .about-content .text h2 {
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.about .about-content .text h3:nth-of-type(1),
+h3:nth-of-type(2) {
+    margin: 20px 0 5px;
+}
+
+.about .about-content .text p {
+    color: var(--gray);
+}
+
+.about .text span {
+    color: var(--maincolor);
+}
+
+@media (max-width: 767px) {
+    .about .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about .about-content img {
+        width: 70%;
+        margin-bottom: 20px;
+    }
+}
+
+.heading {
+    text-align: center;
+}
+
+.heading p {
+    color: var(--maincolor);
+    font-size: 20px;
+}
+
+.heading h2 {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.menu .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2rem;
+    gap: 5rem;
+    align-items: center;
+}
+
+.menu .row .item {
+    display: flex;
+    margin: 30px 0;
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    padding: 25px 20px;
+}
+
+.menu .item img {
+    width: 80px;
+    margin-left: -50px;
+}
+
+.menu .row .det {
+    margin-left: 20px;
+}
+
+.menu .row h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.menu .row .col {
+    position: relative;
+}
+
+.menu .row p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.menu .row .price {
+    color: var(--maincolor);
+    padding: 20px;
+    margin: auto;
+    border-left: 1px solid #eee;
+}
+
+@media (max-width: 767px) {
+    .menu .row {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .menu .item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu .row .price {
+        border-left: none;
+        border-top: 1px solid #eee;
+        padding-top: 10px;
+        margin-top: 15px;
+    }
+}
+
+.contact {
+    background-color: rgb(216, 212, 212);
+}
+
+.contact .row {
+    display: grid;
+    grid-template-columns: 2fr 1.4fr;
+    margin-top: 2rem;
+}
+
+.contact .row .contact-content {
+    background-color: white;
+    padding: 40px;
+}
+
+.contact .row .contact-content h3 {
+    font-size: 29px;
+    font-weight: 600;
+}
+
+.contact .contact-content form input,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+}
+
+.contact .contact-content button {
+    color: white;
+    background-color: black;
+    width: 100%;
+    border: none;
+    padding: 20px;
+    transition: .3s;
+}
+
+.contact .contact-content button:hover {
+    background-color: var(--maincolor);
+}
+
+.contact .map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 767px) {
+    .contact .row {
+        grid-template-columns: 1fr;
+    }
+}
+
+footer .top {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background-image: url("../images/footer-bg.png");
+    color: white;
+}
+
+footer .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .row .col {
+    position: relative;
+}
+
+footer .row .col h2 {
+    margin-bottom: 20px;
+    font-weight: bold;
+    position: relative;
+    left: -15px;
+
+}
+
+footer .row .col p {
+    line-height: 1.6;
+    width: 400px;
+    margin-bottom: 10px;
+    position: relative;
+    left: -15px;
+    font-weight: 400;
+}
+
+footer .row .col ul li {
+    margin-bottom: 10px;
+    position: relative;
+    font-weight: 400;
+}
+
+footer .row li i {
+    position: relative;
+    left: -15px;
+}
+
+footer .copy-right {
+    background-color: var(--gray);
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer .copy-right p {
+    font-weight: bold;
+}
+
+footer .copy-right p strong {
+    color: var(--maincolor);
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    footer .row {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    footer .row .col:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        background-color: var(--gray);
+        width: 130px;
+        left: 150px;
+        height: 1px;
+    }
+
+    footer .row .col p {
+        width: 100%;
+        left: 0;
+
+    }
+}
